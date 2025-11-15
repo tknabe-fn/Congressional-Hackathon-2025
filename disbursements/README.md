@@ -2,7 +2,7 @@
 
 ## Coding Breakout Group - Disbursements team
 
-We used the house official disbursements as an initial data source. **[House Disbursement Reports](https://www.house.gov/the-house-explained/open-government/statement-of-disbursements)**. That data is in CSVs broken down by quarter. We did the following with the data:
+We used the house official disbursements as an initial data source. **[House Disbursement Reports](https://www.house.gov/the-house-explained/open-government/statement-of-disbursements)**. For older data get it from the archive page and you want the detail SOD view. That data is in CSVs broken down by quarter. We did the following with the data:
 
 1. Normalized dates in the CSV to the ISO format in excel
 
@@ -32,7 +32,7 @@ Amount DECIMAL
 );
 ```
 
-1. Created a temporary table to upload the csv data and then added the data to the disbursements table with the appropriate schema
+1. Created a temporary table to upload the csv data and then added the data to the disbursements table with the appropriate schema. Use the above query to make an identical table with the right columns. Then open sqlite3 in the terminal `.mode csv` and then the data has headers so do `.headers on`
 
 Grab data from the CSV
 ```.import april-june2025.csv disbursements-temp```
